@@ -1,0 +1,135 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+
+$light-grey:   rgb(205, 205, 205);
+$grey:        rgb(95, 95, 95);
+$light-black:  rgb(20, 20, 20);
+$black:       rgb(10, 10, 10);
+
+// Generics
+body {
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $black;
+  letter-spacing: 0.01rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3, h4, h5 {
+  font-size: 2rem;
+}
+
+
+// Modules
+
+body > .header {
+  @include outer-container;
+
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  width: 24rem;
+  color: $grey;
+
+  .sep {
+    color: $light-grey;
+  }
+  
+  .page {
+    color: $black
+  }
+}
+
+body > .nav {
+  @include outer-container;
+  margin-top: 10rem;
+
+  li {
+    @include span-columns(3);
+    position: relative;
+    list-style: none;
+  }
+
+  a {
+    display: inline-block;
+    width: 10em;
+    text-align: center;
+  }
+
+  li:before {
+    content: "";
+    position: absolute;
+    top: -7em;
+    margin-left: 2.5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 3rem;
+    background: $light-grey;
+  }
+}
+
+body > .message {
+  @include outer-container;
+
+  text-align: center;
+
+  h2, h3, h4, h5 {
+    color: $grey;
+  }
+
+  p {
+    color: $light-black;
+  }
+}
+
+
+#love {
+  @include outer-container;
+  position:    relative;
+  width:       100px;
+  height:      90px;
+  margin-top:  10px;
+}
+
+#love:before, #love:after {
+  position:       absolute;
+  content:        "";
+  left:           50px;
+  top:            0;
+  width:          52px;
+  height:         80px;
+  background:     $light-grey;
+  border-radius:  50px 50px 0 0;
+}
+
+#love:before {
+  -webkit-transform:         rotate(-45deg);
+  -moz-transform:            rotate(-45deg);
+  -ms-transform:             rotate(-45deg);
+  -o-transform:              rotate(-45deg);
+  transform:                 rotate(-45deg);
+  -webkit-transform-origin:  0 100%;
+  -moz-transform-origin:     0 100%;
+  -ms-transform-origin:      0 100%;
+  -o-transform-origin:       0 100%;
+  transform-origin:          0 100%;
+}
+
+#love:after { 
+  left:                      0;
+  -webkit-transform:         rotate(45deg);
+  -moz-transform:            rotate(45deg);
+  -ms-transform:             rotate(45deg);
+  -o-transform:              rotate(45deg);
+  transform:                 rotate(45deg);
+  -webkit-transform-origin:  100% 100%;
+  -moz-transform-origin:     100% 100%;
+  -ms-transform-origin:      100% 100%;
+  -o-transform-origin:       100% 100%;
+  transform-origin :         100% 100%;
+} 
