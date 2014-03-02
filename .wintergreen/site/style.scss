@@ -141,7 +141,7 @@ body > .small-nav {
   li {
     @include span-columns(3);
     list-style: none;
-    height: 10rem;
+    height: 3rem;
     text-align: center;
   }
 
@@ -181,15 +181,16 @@ body > .small-nav {
 }
 
 body > .message {
-  @include outer-container;
-
+  @include outer-container();
   text-align: center;
 
   h2, h3, h4, h5 {
+    @include span-columns(12);
     color: $grey;
   }
 
   p {
+    @include span-columns(12);
     color: $light-black;
   }
 }
