@@ -43,10 +43,13 @@ h3, h4, h5 {
 
 body > .header {
   @include outer-container;
+  @include shift(4);
+  @include span-columns(8);
 
   font-weight: 100;
   letter-spacing: 0.5rem;
-  width: 24rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
   color: $grey;
 
   .sep {
@@ -60,9 +63,12 @@ body > .header {
 
 body > .nav {
   @include outer-container;
+  @include shift(1);
+  @include span-columns(10);
+
+  padding-left: 0;
 
   li {
-  @include outer-container;
     @include span-columns(3);
     list-style: none;
     height: 10rem;
@@ -125,10 +131,12 @@ body > .nav {
 }
 
 body > .small-nav {
+  @include outer-container;
   @include shift(4);
   @include span-columns(4);
 
-  margin-top: -1rem;
+  margin-top: 0;
+  padding-left: 0;
 
   li {
     @include span-columns(3);
