@@ -47,29 +47,61 @@ body > .header {
 
 body > .nav {
   @include outer-container;
-  margin-top: 10rem;
 
   li {
+  @include outer-container;
     @include span-columns(3);
-    position: relative;
     list-style: none;
+    height: 10rem;
+    text-align: center;
   }
 
   a {
     display: inline-block;
-    width: 10em;
-    text-align: center;
   }
 
-  li:before {
+  a:before {
     content: "";
-    position: absolute;
-    top: -7em;
-    margin-left: 2.5rem;
+    display: block;
     width: 5rem;
     height: 5rem;
+    margin-bottom: 2rem;
     border-radius: 3rem;
     background: $light-grey;
+  }
+
+  a:hover:before {
+    background: $light-black;
+  }
+
+  a span {
+    display: none;
+    position: relative;
+  }
+
+  a:hover span {
+    display: block;
+    width: 5rem;
+  }
+
+  a span:before {
+    content: "";
+    position: absolute;
+    top: -4.5rem;
+    right: 50%;
+    width: 1px;
+    height: 2.5rem; 
+    border-left: $light-grey 1px solid;
+  }
+
+  a span:after {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    right: 50%;
+    width: 1px;
+    height: 2rem;
+    border-left: $grey 1px solid;
   }
 }
 
