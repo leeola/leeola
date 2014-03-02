@@ -3,4 +3,4 @@ veronica*
 .sass-cache
 bourbon
 neat
-.css
+*.css
