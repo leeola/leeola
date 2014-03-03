@@ -59,6 +59,11 @@ body > .header {
   .page {
     color: $black
   }
+
+  a, a:hover, a:visited, a:active {
+    font-weight: 100;
+    text-decoration: none;
+  }
 }
 
 body > .nav {
