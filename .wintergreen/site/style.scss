@@ -179,7 +179,8 @@ body > .small-nav {
 }
 
 body > .message {
-  @include span-columns(12);
+  @include shift(3);
+  @include span-columns(6);
   text-align: center;
 
   h2, h3, h4, h5 {
