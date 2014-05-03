@@ -1,6 +1,4 @@
 ---
 template: page.toffee
-pageName: yvar
+pageName: projects
 ---
-
-foo
