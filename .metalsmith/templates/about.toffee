@@ -1,26 +1,20 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Raleway:100,100i,200,200i,300,300i,400,400i,500,500i">
-  <link rel="stylesheet" href="/style.css" />
-
-  <title>leeo.la/nil</title>
-</head>
+{#
+head_include = """
+  <meta http-equiv="refresh" content="0; url=/yvar" />
+  <meta name="robots" content="noindex,follow" />
+"""
+#}
+#{partial 'head.toffee', head_include: head_include}
 <body>
+#{partial 'header.toffee'}
 
-<header>
-  <h1 class="header">
-    leeo<span class="sep">.</span>la<span class="sep">/</span><span class="page">nil</span>
-  </h1>
-
-  <ul class="nav">
-    <li><a href="yvar"><span>about</span></a></li>
-    <li><a href="blog"><span>blog</span></a></li>
-    <li><a href="projects"><span>projects</span></a></li>
-    <li><a href="dotfiles"><span>dotfiles</span></a></li>
-  </ul>
-</header>
+<section class="message">
+  <h2>
+    Redirecting to <a href="/yvar">/yvar</a>
+  </h2>
+</section>
 
 #{contents}
 
