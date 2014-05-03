@@ -4,6 +4,7 @@
 path       = require 'path'
 metalsmith = require 'metalsmith'
 markdown   = require 'metalsmith-markdown'
+permalinks = require 'metalsmith-permalinks'
 templates  = require 'metalsmith-templates'
 
 
@@ -16,6 +17,7 @@ module.exports = build = (callback=->) ->
     .options remove: false
     .use markdown()
     .use templates 'toffee'
+    .use permalinks()
     .build callback
 
 
