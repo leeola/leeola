@@ -1,1 +1,4 @@
+.DS_Store
 .git
+metalsmith/node_modules
+metalsmith/build
