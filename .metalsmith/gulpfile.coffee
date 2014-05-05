@@ -22,6 +22,7 @@ paths =
     '../**'
   ]
   sass: './sass/**/*.scss'
+  static: './static/**/*'
 
 
 # ## metalsmith
@@ -37,6 +38,14 @@ gulp.task 'sass', ->
   gulp.src paths.sass
     .pipe sass()
     .pipe gulp.dest 'build/css'
+
+
+# ## static
+#
+# Copy static assets to build dir.
+gulp.task 'static', ->
+  gulp.src paths.static
+    .pipe gulp.dest 'build'
 
 
 # ## watch:code
