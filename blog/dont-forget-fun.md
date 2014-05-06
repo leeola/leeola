@@ -1,9 +1,12 @@
-```metadata
+---
 title: Don't forget fun
-author: leeolayvar
 date: 2013-10-11 22:00
-template: article.jade
-```
+template: page.toffee
+collection: blog
+---
+
+
+
 
 Dear Fictional Reader,
 
