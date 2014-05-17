@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html>
-  #{partial 'head.toffee'}
+#{partial 'head.toffee'}
 <body>
-  #{partial 'header.toffee'}
+#{partial 'header.toffee'}
 
-  {#
-  for post in paginate.files
-    {:
-    <a href="/#{post.file[...-5]}">#{print post.title}</a>
-    :}
-  #}
+{#
+for post in paginate.files
+  {:
+  <a href="/#{post.file[...-5]}">#{print post.title}</a>
+  :}
+#}
 
 </body>
 </html>
