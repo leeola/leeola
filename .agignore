@@ -2,3 +2,5 @@
 .git
 metalsmith/node_modules
 metalsmith/build
+metalsmith/sass/bourbon
+metalsmith/sass/neat
