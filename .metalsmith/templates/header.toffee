@@ -1,4 +1,4 @@
-<header>
+<header class="small">
   <h1 class="header">
     <a href="/">leeo<span class="sep">.</span>la</a><span class="sep">/</span><span class="page">#{pageName}</span>
   </h1>

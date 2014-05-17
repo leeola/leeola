@@ -44,8 +44,13 @@ h3, h4, h5 {
 // Modules
 
 body > header {
+  width: 23rem;
+
   @include shift(4);
   display: inline-block;
+}
+body > header.small {
+  width: 13rem;
 }
 
 body > header .header {
@@ -142,7 +147,9 @@ body > header .small-nav {
   padding-left: 0;
 
   li {
-    @include span-columns(3);
+    float: left;
+    width: 25%;
+
     list-style: none;
     height: 3rem;
     text-align: center;
