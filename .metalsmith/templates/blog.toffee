@@ -4,12 +4,16 @@
 <body>
 #{partial 'header.toffee'}
 
-{#
-for post in paginate.files
-  {:
-  <a href="/#{post.file[...-5]}">#{print post.title}</a>
-  :}
-#}
+<ul "blog-list">
+  {#
+  for post in paginate.files
+    {:
+    <li>
+      <a href="/#{post.file[...-5]}">#{print post.title}</a>
+    </li>
+    :}
+  #}
+</ul>
 
 </body>
 </html>

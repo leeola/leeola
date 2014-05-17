@@ -29,7 +29,9 @@ module.exports = build = (callback=->) ->
       collection: 'blog'
       perPage: 10
       output: 'blog'
-      metadata: template: 'blog.toffee'
+      metadata:
+        pageName: 'blog'
+        template: 'blog.toffee'
     .use permalinks()
     .use templates 'toffee'
     .build callback
