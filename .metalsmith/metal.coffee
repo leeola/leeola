@@ -8,6 +8,7 @@ markdown    = require 'metalsmith-markdown'
 permalinks  = require 'metalsmith-permalinks'
 templates   = require 'metalsmith-templates'
 paginate    = require './plugins/paginate'
+NOTify      = require './plugins/notify'
 
 
 
@@ -22,16 +23,17 @@ module.exports = build = (callback=->) ->
     .options remove: false
     .use markdown()
     .use collections
-      blog:
-        pattern: 'blog/posts/*.md'
+      notcode:
+        pattern: 'notcode/**/*.html'
         sortBy: 'date'
     .use paginate
-      collection: 'blog'
+      collection: 'notcode'
       perPage: 10
-      output: 'blog'
+      output: '!code'
       metadata:
-        pageName: 'blog'
-        template: 'blog.toffee'
+        pageName: '!code'
+        template: 'notcode.toffee'
+    .use NOTify()
     .use permalinks()
     .use templates 'toffee'
     .build callback
