@@ -50,7 +50,7 @@ body > header {
   display: inline-block;
 }
 body > header.small {
-  width: 13rem;
+  width: 17rem;
 }
 
 body > header .header {
@@ -144,6 +144,7 @@ body > header .small-nav {
   width: 100%;
 
   margin-top: 0;
+  margin-left: -1.6rem;
   padding-left: 0;
 
   li {
