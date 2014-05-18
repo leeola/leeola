@@ -1,12 +1,14 @@
 #
 # # Gulpfile
 #
-metal   = require './metal'
-path    = require 'path'
-connect = require 'connect'
-gulp    = require 'gulp'
-sass    = require 'gulp-sass'
-util    = require 'gulp-util'
+metal      = require './metal'
+path       = require 'path'
+connect    = require 'connect'
+gulp       = require 'gulp'
+minifyCss  = require 'gulp-minify-css'
+minifyHtml = require 'gulp-minify-html'
+sass       = require 'gulp-sass'
+util       = require 'gulp-util'
 
 
 
@@ -21,6 +23,7 @@ paths =
     '!node_modules/**'
     '../**'
   ]
+  html: './build/**/*.html'
   sass: './sass/**/*.scss'
   static: './static/**/*'
 
@@ -28,7 +31,16 @@ paths =
 # ## metalsmith
 #
 # Compile our metalsmith markdown and templates.
-gulp.task 'metalsmith', -> metal()
+gulp.task 'metalsmith', (done) -> metal done
+
+
+# ## html
+#
+# Process the html, mostly minifying it.
+gulp.task 'html', ['metalsmith'], ->
+  gulp.src paths.html
+    .pipe minifyHtml()
+    .pipe gulp.dest 'build'
 
 
 # ## sass
@@ -37,6 +49,7 @@ gulp.task 'metalsmith', -> metal()
 gulp.task 'sass', ->
   gulp.src paths.sass
     .pipe sass()
+    .pipe minifyCss()
     .pipe gulp.dest 'build/css'
 
 
@@ -81,5 +94,5 @@ gulp.task 'watch:sass', ['sass'], ->
 
 gulp.task 'watch', ['watch:md']
 gulp.task 'watch:all', ['watch:md', 'watch:code', 'watch:sass']
-gulp.task 'build', ['metalsmith', 'sass']
+gulp.task 'build', ['metalsmith', 'html', 'sass']
 gulp.task 'default', ['build']
