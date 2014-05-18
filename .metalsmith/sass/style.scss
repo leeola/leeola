@@ -51,6 +51,11 @@ body > header {
 }
 body > header.small {
   width: 17rem;
+
+  .page {
+    padding-bottom: 1.5rem;
+    border-bottom: $light-grey 1px solid;
+  }
 }
 
 body > header .header {
@@ -65,8 +70,6 @@ body > header .header {
   
   .page {
     color: $black;
-    padding-bottom: 1.5rem;
-    border-bottom: $light-grey 1px solid;
   }
 
   a, a:hover, a:visited, a:active {
