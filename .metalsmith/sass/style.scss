@@ -64,7 +64,9 @@ body > header .header {
   }
   
   .page {
-    color: $black
+    color: $black;
+    padding-bottom: 1.5rem;
+    border-bottom: $light-grey 1px solid;
   }
 
   a, a:hover, a:visited, a:active {
