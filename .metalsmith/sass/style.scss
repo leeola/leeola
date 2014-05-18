@@ -190,6 +190,14 @@ body > header .small-nav {
   }
 }
 
+.blog-list {
+  @include shift(2);
+  @include span-columns(4);
+
+  .li {
+  }
+}
+
 body > .message {
   @include shift(3);
   @include span-columns(6);

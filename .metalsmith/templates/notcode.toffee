@@ -4,7 +4,7 @@
 <body>
 #{partial 'header.toffee'}
 
-<ul "blog-list">
+<ul class="blog-list">
   {#
   for post in paginate.files
     {:
