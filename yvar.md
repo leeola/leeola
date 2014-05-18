@@ -2,5 +2,3 @@
 template: page.toffee
 pageName: yvar
 ---
-
-foo
