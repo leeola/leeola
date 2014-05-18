@@ -9,9 +9,9 @@
 
   <ul class="nav">
     <li><a href="/yvar"><span>about</span></a></li>
-    <li><a href="/!code"><span>!code</span></a></li>
     <li><a href="/projects"><span>projects</span></a></li>
     <li><a href="/dotfiles"><span>dotfiles</span></a></li>
+    <li><a href="/!code"><span>!code</span></a></li>
   </ul>
 </header>
 
