@@ -2,7 +2,7 @@
 title: Don't forget fun
 date: 2013-10-11 22:00
 template: page.toffee
-collection: blog
+pageName: '!code'
 ---
 
 
