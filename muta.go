@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 
+	"./.muta/plugins/prettyurls"
 	"github.com/leeola/muta"
 	"github.com/leeola/muta-frontmatter"
 	"github.com/leeola/muta-markdown"
@@ -38,6 +39,7 @@ func main() {
 			Pipe(frontmatter.FrontMatter(fmTyper)).
 			Pipe(markdown.Markdown()).
 			Pipe(template.Template("./.muta/templates")).
+			Pipe(prettyurls.Prettyurls()).
 			Pipe(muta.Dest("./build"))
 		return s, nil
 	})
