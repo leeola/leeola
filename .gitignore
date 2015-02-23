@@ -3,6 +3,7 @@ veronica*
 .sass-cache
 bourbon
 neat
+build
 .wintergreen/**/*.css
 .metalsmith/css/*.css
 .metalsmith/node_modules

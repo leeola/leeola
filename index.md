@@ -1,4 +1,5 @@
 ---
-template: index.toffee
+fmtype: page
+template: index.tmpl
 pageName: nil
 ---

@@ -1,4 +1,5 @@
 ---
-template: page.toffee
+fmtype: page
+template: page.tmpl
 pageName: yvar
 ---

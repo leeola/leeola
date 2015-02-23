@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+{{ template "head.tmpl" . }}
+<body>
+{{ template "header.tmpl" . }}
+
+<ul class="blog-list">
+  <!-- Not Implemented
+  {#
+  for post in paginate.files
+    {:
+    <li>
+      <a href="/#{post.file[...-5]}">#{print post.title}</a>
+    </li>
+    :}
+  #}
+  -->
+</ul>
+
+</body>
+</html>

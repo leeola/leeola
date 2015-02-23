@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+{{ headInclude := `<meta http-equiv="refresh" content="0; url=/yvar" /><meta name="robots" content="noindex,follow" />` }}
+{{ template "head.tmpl" . }}
+<body>
+{{ template "header.tmpl" . }}
+
+
+<section class="message">
+  <h2>
+    Redirecting to <a href="/yvar">/yvar</a>
+  </h2>
+</section>
+
+{{.Content}}
+
+</body>
+</html>
+
+
