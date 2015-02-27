@@ -1,0 +1,264 @@
+$light-grey:   rgb(205, 205, 205);
+$grey:         rgb(95, 95, 95);
+$dark-grey:    rgb(40, 40, 40);
+$light-black:  rgb(20, 20, 20);
+$black:        rgb(10, 10, 10);
+
+// Generics
+body {
+  //@include outer-container;
+
+  font-size: 1rem;
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $black;
+  letter-spacing: 0.01rem;
+}
+
+a {
+  color: $dark-grey;
+}
+
+a:visited {
+  color: $grey;
+}
+
+a:hover, a:active, a:focus {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3, h4, h5 {
+  font-size: 2rem;
+}
+
+
+// Modules
+
+body > header {
+  width: 23rem;
+
+  //@include shift(4);
+  display: inline-block;
+}
+body > header.small {
+  width: 17rem;
+
+  .page {
+    padding-bottom: 1.5rem;
+    border-bottom: $light-grey 1px solid;
+  }
+}
+
+body > header .header {
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
+  color: $grey;
+
+  .sep {
+    color: $light-grey;
+  }
+  
+  .page {
+    color: $black;
+  }
+
+  a, a:hover, a:visited, a:active {
+    font-weight: 100;
+    text-decoration: none;
+  }
+}
+
+body > header .nav {
+  margin-top: 3rem;
+  padding-left: 0;
+
+  li {
+    //@include span-columns(6);
+    list-style: none;
+    height: 10rem;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  a, a:hover, a:visited {
+    text-decoration: none;
+    color: $light-black;
+    font-weight: normal;
+  }
+
+  a:before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 3rem;
+    background: $light-grey;
+  }
+
+  a:hover:before {
+    background: $light-black;
+  }
+
+  a span {
+    display: none;
+    position: relative;
+  }
+
+  a:hover span {
+    display: block;
+    width: 5rem;
+  }
+
+  a span:before {
+    content: "";
+    position: absolute;
+    top: -4.5rem;
+    right: 50%;
+    width: 1px;
+    height: 2.5rem; 
+    border-left: $light-grey 1px solid;
+  }
+
+  a span:after {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    right: 50%;
+    width: 1px;
+    height: 2rem;
+    border-left: $grey 1px solid;
+  }
+}
+
+body > header .small-nav {
+  width: 100%;
+
+  margin-top: 0;
+  margin-left: -1.6rem;
+  padding-left: 0;
+
+  li {
+    float: left;
+    width: 25%;
+
+    list-style: none;
+    height: 3rem;
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  a, a:hover, a:visited {
+    text-decoration: none;
+    color: $light-black;
+    font-weight: normal;
+  }
+
+  a:before {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 2rem 1rem;
+    border-radius: 0.5rem;
+    background: $light-grey;
+  }
+
+  a:hover:before {
+    background: $light-black;
+  }
+
+  a span {
+    display: none;
+    position: relative;
+  }
+
+  a:hover span {
+    display: block;
+    width: 5rem;
+  }
+}
+
+.blog-list {
+  //@include shift(2);
+  //@include span-columns(4);
+
+  .li {
+  }
+}
+
+body > .message {
+  //@include shift(3);
+  //@include span-columns(6);
+  text-align: center;
+
+  h2, h3, h4, h5 {
+    //@include span-columns(12);
+    color: $grey;
+  }
+
+  p {
+    //@include span-columns(12);
+    color: $light-black;
+  }
+}
+
+
+#love {
+  display:     inline-block;
+  position:    relative;
+  width:       100px;
+  height:      90px;
+  margin-top:  10px;
+}
+
+#love:before, #love:after {
+  position:       absolute;
+  content:        "";
+  left:           50px;
+  top:            0;
+  width:          52px;
+  height:         80px;
+  background:     $light-grey;
+  border-radius:  50px 50px 0 0;
+}
+
+#love:before {
+  -webkit-transform:         rotate(-45deg);
+  -moz-transform:            rotate(-45deg);
+  -ms-transform:             rotate(-45deg);
+  -o-transform:              rotate(-45deg);
+  transform:                 rotate(-45deg);
+  -webkit-transform-origin:  0 100%;
+  -moz-transform-origin:     0 100%;
+  -ms-transform-origin:      0 100%;
+  -o-transform-origin:       0 100%;
+  transform-origin:          0 100%;
+}
+
+#love:after { 
+  left:                      0;
+  -webkit-transform:         rotate(45deg);
+  -moz-transform:            rotate(45deg);
+  -ms-transform:             rotate(45deg);
+  -o-transform:              rotate(45deg);
+  transform:                 rotate(45deg);
+  -webkit-transform-origin:  100% 100%;
+  -moz-transform-origin:     100% 100%;
+  -ms-transform-origin:      100% 100%;
+  -o-transform-origin:       100% 100%;
+  transform-origin :         100% 100%;
+} 
