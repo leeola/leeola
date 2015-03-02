@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"./.muta/plugins/prettyurls"
+	"./plugins/prettyurls"
 	"github.com/leeola/muta"
 	"github.com/leeola/muta-frontmatter"
 	"github.com/leeola/muta-markdown"
